@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+.side_bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100px;
+    transition: all 1s;
+}
+.side_bar_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 60px;
+    box-shadow: 0 0 10px gray;
+    border-radius: 10px;
+    margin-left: 20px;
+    position: fixed;
+    transform: translate(-100px, 0);
+    opacity: 0;
+    transition: all 1s;
+}
+.side_bar_container.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.side_bar_container_wider {
+    width: 232px;
+}
+
+.side_bar_menu {
+    width: 232px;
+    min-width: 60px;
+    overflow: hidden;
+    padding: 10px 16px;
+    box-sizing: border-box;
+}
+
+.side_bar_menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+
+.side_bar_menu ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    text-decoration: none;
+    width: 100%;
+    
+    color: black;
+    font-family: "League Spartan";
+    text-transform: uppercase;
+}
+
+.side_bar_menu ul li a .text {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.side_bar_menu ul li a .icon {
+    width: 28px;
+    display: flex;
+    justify-content: center;
+}
+.side_bar_menu ul li a .nav_bar_icons {
+    font-size: 1.5rem;
+}
+
+.arrow-right {
+    display: block;
+    width: 28px;
+    height: 28px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+.arrow-right.black {
+    background-color: black;
+    color: #fff;
+}
+
+.side_bar_menu ul li:first-child {
+    padding: 10px 0;
+}
+
+.fa-solid.fa-arrow-right {
+    transition: all 0.5s;
+}
+
+.fa-solid.fa-arrow-right.flip {
+    transform: rotate(180deg);
+}
+  
