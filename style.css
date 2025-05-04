@@ -111,3 +111,64 @@ body {
     transform: rotate(180deg);
 }
   
+
+
+
+
+.inputBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: rgb(195, 255, 235);
+    gap: 20px;
+}
+
+.box {
+    position: relative;
+}
+
+input {
+    background-color: transparent;
+    border: 2px solid rgb(25, 185, 132);
+    padding: 15px;
+    border-radius: 15px;
+    outline: none;
+    caret-color: rgb(25, 185, 132);
+    transition: all 0.5s;
+    position: relative;
+    z-index: 1;
+}
+
+input:valid,
+input:focus {
+    border: 2px solid rgb(13, 105, 74);
+    transition: all 0.5s;
+    z-index: 0;
+}
+input:valid ~ p,
+input:focus ~ p{
+    background-color: rgb(195, 255, 235);
+    transform: translate(10px, -25px);
+    transition: all 0.5s;
+    z-index: 1;
+    color: rgb(13, 105, 74);
+}
+
+.box p {
+    position: absolute;
+    top: 19px;
+    left: 15px;
+    color: rgb(25, 185, 132);
+    font-family: "League Spartan";
+    margin: 0;
+    transform: translate(0, 0);
+    background-color: transparent;
+    transition: all 0.5s;
+    padding: 0 5px;
+    z-index: 0;
+}
+
+
+
